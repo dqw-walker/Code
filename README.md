@@ -1,0 +1,1 @@
+textAnalysis项目：从巨潮资讯网下载stockcode.xlsx文件中指定股票编码的企业年报PDF文件，然后把pdf转换为txt文件，然后把wordKey.txt里面的关键词导入到jieba中，然后对年报txt里的txt文件进行文本分析，得到wordKey.txt里面的关键词出现在年报txt中出现的频率
