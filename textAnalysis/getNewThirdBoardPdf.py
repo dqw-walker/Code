@@ -59,7 +59,7 @@ def req(stock, year, org_dict):
     }
 
     try:
-        # 使用Session发送请求
+
         req = requests.post(url, data=data, headers=headers)
 
         if json.loads(req.text)["announcements"]:
@@ -80,7 +80,6 @@ def req(stock, year, org_dict):
         # 该函数主要是通过http://www.cninfo.com.cn/new/data/szse_stock.json该json数据，找到每个stock对应的orgid，并存储在字典org_dict中
 def get_orgid():
     org_dict = {}
-    #org_json = requests.get("http://www.cninfo.com.cn/new/data/szse_stock.json").json()["stockList"]
     org_json = requests.get("http://www.cninfo.com.cn/new/data/gfzr_stock.json").json()["stockList"]
 
     for i in range(len(org_json)):
